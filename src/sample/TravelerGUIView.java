@@ -55,6 +55,14 @@ public class TravelerGUIView {
         nationalityBox.setSpacing(10);
         primaryBox.getChildren().add(nationalityBox);
 
+        passportLabel = new Text("Enter passenger's passport number:");
+        passportLabel.setFont(font);
+        passportField = new TextField();
+        VBox passportBox = new VBox(passportLabel, passportField);
+        passportBox.setAlignment(Pos.CENTER);
+        passportBox.setSpacing(10);
+        primaryBox.getChildren().add(passportBox);
+
 
 
 
