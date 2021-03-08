@@ -123,6 +123,26 @@ public class TravelerGUIView {
         finalDestinationField.clear();
     }
 
+    public String getNameField() {
+        return nameField.getText();
+    }
+
+    public String getNationalityField() {
+        return nationalityField.getText();
+    }
+
+    public String getPassportField() {
+        return passportField.getText();
+    }
+
+    public String getFlightNumberField(){
+        return flightNumberField.getText();
+    }
+
+    public String getFinalDestinationField() {
+        return finalDestinationField.getText();
+    }
+
 
 
 

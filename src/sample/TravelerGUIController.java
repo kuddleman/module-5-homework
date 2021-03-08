@@ -35,12 +35,14 @@ public class TravelerGUIController extends Application {
         launch(args);
     }
 
+    // TO DO
     private void addTraveler(ActionEvent event) {
-        System.out.println("ok");
+
     }
 
+    // TO DO
     private void displayTravelers(ActionEvent event) {
-        System.out.println("ok");
+
     }
 
 
