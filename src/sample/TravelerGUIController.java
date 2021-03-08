@@ -1,9 +1,12 @@
 package sample;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
+import javafx.application.*;
+import javafx.event.*;
+import javafx.scene.*;
+import javafx.scene.paint.*;
+import javafx.stage.*;
+
+
 
 public class TravelerGUIController extends Application {
     private FlightManifest flightManifest;
@@ -12,6 +15,9 @@ public class TravelerGUIController extends Application {
     public TravelerGUIController() {
         flightManifest = new FlightManifest();
         travelerInputView = new TravelerGUIView();
+
+        travelerInputView.setDisplayTravelersAction(this::displayTravelers);
+        travelerInputView.setAddTravelerAction(this::addTraveler);
     }
 
     @Override
@@ -27,6 +33,14 @@ public class TravelerGUIController extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    private void addTraveler(ActionEvent event) {
+        System.out.println("ok");
+    }
+
+    private void displayTravelers(ActionEvent event) {
+        System.out.println("ok");
     }
 
 

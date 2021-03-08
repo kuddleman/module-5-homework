@@ -1,6 +1,6 @@
 package sample;
 
-public class Traveler {
+public abstract class Traveler {
     private String travelerName;
     private String nationality;
     private String passportNumber;
@@ -44,21 +44,6 @@ public class Traveler {
 
     public String getFinalDestination() {
         return finalDestination;
-    }
-
-    @Override
-    public String toString() {
-
-        return "Traveler's Name: " + travelerName + "\n" +
-                "Nationality: " + nationality + "\n" +
-                "Passport Number: " + passportNumber + "\n" +
-                "Flight Number: " + flightNumber + "\n" +
-                "Final Destination: " + finalDestination;
-    }
-
-    public static void main(String[] args) {
-        Traveler donny = new Traveler("Donny", "USA", "Z4567", "PA121", "LHR");
-        System.out.println(donny);
     }
 }
 

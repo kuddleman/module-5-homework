@@ -1,11 +1,14 @@
 package sample;
 
 
+import javafx.event.*;
 import javafx.geometry.*;
 import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.*;
+
 
 public class TravelerGUIView {
 
@@ -13,7 +16,7 @@ public class TravelerGUIView {
                       passportField, flightNumberField, finalDestinationField;
 
     private Text introText, nameLabel, nationalityLabel,
-                 passportLabel, flightNumberLabel, finalDestinationLabel;
+                 passportLabel, flightNumberLabel, finalDestinationLabel, resultLabel;
 
     private TextArea result;
 
@@ -81,21 +84,43 @@ public class TravelerGUIView {
 
         addButton = new Button("Add passenger information to manifest");
         displayButton = new Button("Show all passengers added to manifest");
-
         VBox buttonBox = new VBox(addButton, displayButton);
         buttonBox.setAlignment(Pos.CENTER);
         buttonBox.setSpacing(30);
         primaryBox.getChildren().add(buttonBox);
 
-
-
-
-
+        resultLabel = new Text("");
+        resultLabel.setFont(font);
+        resultLabel.setFill(Color.RED);
+        resultLabel.setVisible(false);
+        result = new TextArea("");
+        result.setVisible(false);
+        result.setEditable(false);
+        VBox resultBox = new VBox(resultLabel, result);
+        resultBox.setAlignment(Pos.CENTER);
+        resultBox.setSpacing(10);
+        primaryBox.getChildren().add(resultBox);
 
     }
 
     public Parent getParent() {
         return primaryBox;
+    }
+
+    public void setDisplayTravelersAction(EventHandler<ActionEvent> handler) {
+        displayButton.setOnAction(handler);
+    }
+
+    public void setAddTravelerAction(EventHandler <ActionEvent> handler) {
+        addButton.setOnAction(handler);
+    }
+
+    public void clearInputs() {
+        nameField.clear();
+        nationalityField.clear();
+        passportField.clear();
+        flightNumberField.clear();
+        finalDestinationField.clear();
     }
 
 
