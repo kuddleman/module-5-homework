@@ -39,6 +39,25 @@ public class TravelerGUIView {
         introBox.setSpacing(5);
         primaryBox.getChildren().add(introBox);
 
+        nameLabel = new Text("Enter passenger name:");
+        nameLabel.setFont(font);
+        nameField = new TextField();
+        VBox nameBox = new VBox(nameLabel, nameField);
+        nameBox.setAlignment(Pos.CENTER);
+        nameBox.setSpacing(10);
+        primaryBox.getChildren().add(nameBox);
+
+        nationalityLabel = new Text("Enter passenger's nationality:");
+        nationalityLabel.setFont(font);
+        nationalityField = new TextField();
+        VBox nationalityBox = new VBox(nationalityLabel, nationalityField);
+        nationalityBox.setAlignment(Pos.CENTER);
+        nationalityBox.setSpacing(10);
+        primaryBox.getChildren().add(nationalityBox);
+
+
+
+
     }
 
     public Parent getParent() {
