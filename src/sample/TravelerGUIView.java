@@ -79,6 +79,16 @@ public class TravelerGUIView {
         finalDestinationBox.setSpacing(10);
         primaryBox.getChildren().add(finalDestinationBox);
 
+        addButton = new Button("Add passenger information to manifest");
+        displayButton = new Button("Show all passengers added to manifest");
+
+        VBox buttonBox = new VBox(addButton, displayButton);
+        buttonBox.setAlignment(Pos.CENTER);
+        buttonBox.setSpacing(30);
+        primaryBox.getChildren().add(buttonBox);
+
+
+
 
 
 
