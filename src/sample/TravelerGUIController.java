@@ -18,7 +18,7 @@ public class TravelerGUIController extends Application {
     public void start(Stage primaryStage) {
         TravelerGUIController controller = new TravelerGUIController();
 
-        Scene scene = new Scene(controller.travelerInputView.getParent(), 800, 1200, Color.BEIGE);
+        Scene scene = new Scene(controller.travelerInputView.getParent(), 800, 3200, Color.BEIGE);
         primaryStage.setTitle("Traveler Manifest");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);

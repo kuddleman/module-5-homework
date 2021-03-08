@@ -63,6 +63,22 @@ public class TravelerGUIView {
         passportBox.setSpacing(10);
         primaryBox.getChildren().add(passportBox);
 
+        flightNumberLabel = new Text("Enter passenger's flight number:");
+        flightNumberLabel.setFont(font);
+        flightNumberField = new TextField();
+        VBox flightNumberBox = new VBox(flightNumberLabel, flightNumberField);
+        flightNumberBox.setAlignment(Pos.CENTER);
+        flightNumberBox.setSpacing(10);
+        primaryBox.getChildren().add(flightNumberBox);
+
+        finalDestinationLabel = new Text("Enter passenger's final destination:");
+        finalDestinationLabel.setFont(font);
+        finalDestinationField = new TextField();
+        VBox finalDestinationBox = new VBox(finalDestinationLabel, finalDestinationField);
+        finalDestinationBox.setAlignment(Pos.CENTER);
+        finalDestinationBox.setSpacing(10);
+        primaryBox.getChildren().add(finalDestinationBox);
+
 
 
 
