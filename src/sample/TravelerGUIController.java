@@ -6,6 +6,7 @@ import javafx.scene.*;
 import javafx.scene.paint.*;
 import javafx.stage.*;
 
+import java.util.ArrayList;
 
 
 public class TravelerGUIController extends Application {
@@ -35,16 +36,25 @@ public class TravelerGUIController extends Application {
         launch(args);
     }
 
-    // TO DO
     private void addTraveler(ActionEvent event) {
+        String name = travelerInputView.getNameField();
+        String nationality = travelerInputView.getNationalityField();
+        String passport = travelerInputView.getPassportField();
+        String flightNumber = travelerInputView.getFlightNumberField();
+        String finalDestination = travelerInputView.getFinalDestinationField();
 
+        Traveler traveler = new Traveler(name, nationality, passport, flightNumber, finalDestination);
+        flightManifest.addTraveler(traveler);
+        travelerInputView.clearInputs();
     }
 
-    // TO DO
     private void displayTravelers(ActionEvent event) {
+        ArrayList<Traveler> travelerList = flightManifest.getTravelerList();
+        String output = "";
+        for (Traveler t : travelerList) {
+            output += t.toString() + "\n";
+        }
 
+        travelerInputView.displayResultText("Passengers: ", output);
     }
-
-
-
 }

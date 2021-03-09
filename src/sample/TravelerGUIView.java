@@ -115,6 +115,21 @@ public class TravelerGUIView {
         addButton.setOnAction(handler);
     }
 
+    public void displayResultText(String label, String output) {
+        resultLabel.setVisible(true);
+        resultLabel.setText(label);
+
+        result.clear();
+        result.setVisible(true);
+        result.setText(output);
+    }
+
+    public void hideResultText() {
+        result.clear();
+        result.setVisible(false);
+        resultLabel.setVisible(false);
+    }
+
     public void clearInputs() {
         nameField.clear();
         nationalityField.clear();

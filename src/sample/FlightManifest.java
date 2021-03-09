@@ -18,4 +18,6 @@ public class FlightManifest {
     public ArrayList<Traveler> getTravelerList() {
        return travelerList;
     }
+
+
 }
